@@ -1,0 +1,172 @@
+body {background: #E5E5E5; }
+
+#mybutton {
+	padding: 10px 20px;
+	background-color: dodgerblue;
+	border: 1px solid #ddd;
+	color: white;
+  }
+
+button {
+	padding: 12px 40px;
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid black;
+	color: black;
+	cursor: pointer;
+  }
+
+.Background { 
+	background-color:rgba(255, 255, 255, 1);
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+.PredictionBox { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(173.39995622634888, 0, 255, 1);
+	width:950px;
+	height:175px;
+	position:absolute;
+	left:350px;
+	top:31px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+}
+.Prediction { 
+	color:rgba(255, 255, 255, 1);
+	width:510px;
+	height:100px;
+	position:absolute;
+	left:570px;
+	top:68px;
+	font-family:Roboto;
+	text-align:center;
+	font-size:64px;
+	letter-spacing:0;
+}
+.InformationBox { 
+	background-color:rgba(173.39995622634888, 0, 255, 1);
+	width:800px;
+	height:386px;
+	position:absolute;
+	left:425px;
+	top:336px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+}
+.Report { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(255, 255, 255, 1);
+	width:137px;
+	height:39px;
+	position:absolute;
+	left:943px;
+	top:647px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+.ExplainBox { 
+	color:rgba(255, 255, 255, 1);
+	width:760px;
+	height:70px;
+	position:absolute;
+	left:445px;
+	top:415px;
+	font-family:Roboto;
+	text-align:center;
+	font-size:18px;
+	letter-spacing:0;
+}
+.Calculate { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(255, 255, 255, 1);
+	width:137px;
+	height:39px;
+	position:absolute;
+	left:570px;
+	top:647px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+.CalculateB { 
+	color:rgba(0, 0, 0, 1);
+	width:110px;
+	height:30px;
+	position:absolute;
+	left:581px;
+	top:651px;
+	font-family:Roboto;
+	text-align:center;
+	font-size:26px;
+	letter-spacing:0;
+}
+.ReportB { 
+	color:rgba(0, 0, 0, 1);
+	width:110px;
+	height:30px;
+	position:absolute;
+	left:957px;
+	top:651px;
+	font-family:Roboto;
+	text-align:center;
+	font-size:26px;
+	letter-spacing:0;
+}
+.Information { 
+	color:rgba(255, 255, 255, 1);
+	width:750px;
+	height:60px;
+	position:absolute;
+	left:450px;
+	top:355px;
+	font-family:Roboto;
+	text-align:center;
+	font-size:36px;
+	letter-spacing:0;
+}
+
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }

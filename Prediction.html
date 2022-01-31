@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+          
+    <title>Html Generated</title>
+    <meta name="description" content="Figma htmlGenerator">
+    <meta name="author" content="htmlGenerator">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Sidebar.css">
+    <link rel="stylesheet" href="Prediction.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+            
+    <div class="wrapper">
+      <div class="sidebar">
+          <h1><span style="margin: center; margin-left: 10px; font-weight: normal; color: black;">HousePrediciton<span style="color: #832fed; font-size: 20px">.</span></span></h1>
+            <ul>
+              <li><a href="Home.html"><i class="fas fa-home"></i> Home</a></li>
+              <li><a href="Prediction.html"><i class="fas fa-recycle"></i>Prediction</a></li>                     
+            </ul>
+      </div>         
+  </head>
+  <body>
+    <div class=Background>
+      <div class="PredictionBox"></div>
+      <span class="Prediction">Prediction</span>
+      <div class="InformationBox"></div>
+      <div class="Report"></div>
+      <span class="ExplainBox">Our AI will compare your house with other houses with the help of your house information and will give you a average house price.</span>
+      <div class="Calculate">
+      <button id="Add" >Calculate</button>
+      </div>
+      <span class="ReportB">Report</span>
+      <span class="Information">Please Enter Your House Information</span>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form class="form-inline" method="POST">
+            <input type="number" name="YearBuilt" id="YearBuilt" placeholder="Year Built..." >
+            <input type="text" style="text-transform:uppercase" name="CentralAir" id="CentralAir" placeholder="Central Air Cond. (Y/N)..." maxlength="1">
+            <input type="number" name="GrLivArea" id="GrLivArea" placeholder="Living Area" >
+            <input type="number" name="FullBath" id="FullBath" placeholder="Full Bathrooms..." >
+            <input type="number" name="HalfBath" id="HalfBath" placeholder="Half Bathrooms..." >
+            <input type="number" name="BedroomAbvGr" id="BedroomAbvGr" placeholder="Bedrooms..." >
+            <input type="number" name="KitchenAbvGr" id="KitchenAbvGr" placeholder="Kitchens..." >
+            <input type="number" name="TotRmsAbvGrd" id="TotRmsAbvGrd" placeholder="Total Rooms..." >
+            <input type="number" name="GarageCars" id="GarageCars" placeholder="Garage Size in # of Cars" >
+            <button type="submit" id="mybutton" onclick="getapi()">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("mybutton").addEventListener("click", function(event){
+        event.preventDefault()
+      });
+      </script>
+  </body>
+
+  <script src="scripts/modal.js"></script>
+  <!-- <script src="scripts/require.js"></script> -->
+  <script src="scripts/JSrequets.js"></script>
+  
+</html>
