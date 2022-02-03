@@ -119,6 +119,7 @@ let data = {
 
     xhr.setRequestHeader("Content-Type","application/json")
     xhr.setRequestHeader("Authorization", Authorization)
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "*")
 
     xhr.onload = function(){
         if(this.status == 200){
@@ -156,6 +157,7 @@ async function gettrans(data){
      xhr.setRequestHeader("Content-Type","application/json")
      xhr.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey)
      xhr.setRequestHeader("Ocp-Apim-Subscription-Region", "westeurope")
+     xhr.setRequestHeader("Access-Control-Allow-Origin", "*")
     //  xhr.setRequestHeader("api-version", "3.0")
     //  xhr.setRequestHeader("from", "en")
     //  xhr.setRequestHeader("to", "['de','it']")
