@@ -1,3 +1,5 @@
+var lastdata
+
 async function getapi(){
 
 
@@ -123,6 +125,8 @@ let data = {
             var data = this.responseText;
             console.log("response text: " + data);
             alert(data)
+            lastdata = data
+            console.log("(1)lastdata: " +lastdata)
         } else {
             console.log("response text:" + this.responseText);
         }
@@ -131,5 +135,65 @@ let data = {
     xhr.send(data)
 }
 
+function transferdata(){
+    gettrans(lastdata)
+}
 
-// getapi()
+
+async function gettrans(data){
+
+    var lang = document.getElementById('myselect').value
+
+    console.log("(2)lastdata: " +data)
+      
+    const url = "https://api.cognitive.microsofttranslator.com/translate?";
+    const subscriptionKey = "8795f7dc14c1487cb9d1a9791b9def2a";
+    const params = "api-version=3.0&from=en&to="+lang;
+    var xhr = new XMLHttpRequest();
+    
+    xhr.open('POST', url+params, true);
+    
+     xhr.setRequestHeader("Content-Type","application/json")
+     xhr.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey)
+     xhr.setRequestHeader("Ocp-Apim-Subscription-Region", "westeurope")
+    //  xhr.setRequestHeader("api-version", "3.0")
+    //  xhr.setRequestHeader("from", "en")
+    //  xhr.setRequestHeader("to", "['de','it']")
+    
+    xhr.onload = function(){
+        if(this.status == 200){
+            var translation = this.responseText;
+            console.log("response text(trans): " + translation);
+            translation = translation.slice(27,-15)
+            alert(translation)
+        } else {
+            console.log("response text(trans):" + this.responseText);
+        }
+    }
+    data = JSON.stringify(data)
+    console.log("data(1): " +data)
+    data = JSON.stringify(data)
+    console.log("data(2): " +data)
+    data = data.replace(/\\/g, '');
+    console.log("data(3): " +data)
+    data = data.slice(26,-6)
+    console.log("data(4): " +data)
+    data = data.replace(/"/g, '');
+    console.log("data(5): " +data)
+    data = data.replace('YearBuilt', ' Year Built ');
+    data = data.replace('CentralAir', ' Central Air ');
+    data = data.replace('GrLivArea', ' Gross Living Area ');
+    data = data.replace('FullBath', ' Full Bathrooms ');
+    data = data.replace('HalfBath', ' Half Bathrooms ');
+    data = data.replace('BedroomAbvGr', ' Bedrooms Above Ground ');
+    data = data.replace('KitchenAbvGr', ' Kitchens Above Ground ');
+    data = data.replace('TotRmsAbvGrd', ' Total Rooms Above Ground ');
+    data = data.replace('GarageCars', ' Garage Capacity ');
+    data = data.replace('SalePrice', ' Sale Price ');
+    data = data.replace('Scored Labels', ' Scored Labels ');
+    data = data.replace(':Y', ' : Yes ');
+    data = data.replace(':N', ' : No ');
+    console.log("data(6): " +data)
+    console.log('[{"Text":' + data + '}]')
+    xhr.send('[{"Text":"' + data + '"}]')
+}
