@@ -194,7 +194,7 @@ async function gettrans(data){
     data = data.replace('TotRmsAbvGrd', ' Total Rooms Above Ground ');
     data = data.replace('GarageCars', ' Garage Capacity ');
     data = data.replace('SalePrice', ' Sale Price ');
-    data = data.replace('Scored Labels', ' Scored Labels ');
+    data = data.replace('Scored Labels', ' Estimated Price ');
     data = data.replace(':Y', ' : Yes ');
     data = data.replace(':N', ' : No ');
     console.log("data(6): " +data)
